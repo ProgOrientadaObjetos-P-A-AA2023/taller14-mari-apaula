@@ -29,6 +29,7 @@ public class Principal {
         int mesSueldo;
         String continuar;
         Enlaces c = new Enlaces();
+        c.crearTablaSueldosTrabajadores();
 
         do {
             System.out.println("Ingrese el nombre del trabajador");
@@ -47,6 +48,7 @@ public class Principal {
                     correo, sueldo, mesSueldo);
             
             c.insertarTrabajador(traj);
+            c.obtenerDataTrabajador();
             
             for (int i = 0; i < c.obtenerDataTrabajador().size(); i++) {
             System.out.printf("%s\n", c.obtenerDataTrabajador().get(i));
